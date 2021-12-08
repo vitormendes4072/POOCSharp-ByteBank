@@ -8,7 +8,15 @@ namespace _1_ByteBank
         {
             ContaCorrente vitoria = new ContaCorrente();
             vitoria.Saldo = 10;
-            Console.WriteLine(vitoria.Saldo);
+            vitoria.Titular = "Vitoria";
+            vitoria.NumeroConta = 889;
+            vitoria.NumeroAgencia = 88;
+            Console.WriteLine($"Nome: {vitoria.Titular}");
+            Console.WriteLine($"Agência: {vitoria.NumeroAgencia}");
+            Console.WriteLine($"Número: {vitoria.NumeroConta}");
+            Console.WriteLine($"Saldo: R${vitoria.Saldo}");
+            vitoria.Saldo += 200;
+            Console.WriteLine($"Saldo: R${vitoria.Saldo}");
         }
     }
 }
