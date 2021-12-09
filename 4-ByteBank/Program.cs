@@ -7,19 +7,16 @@ namespace _4_ByteBank
     {
         static void Main(string[] args)
         {
-            ContaCorrente cc = new ContaCorrente();
-            cc.Saldo = 100;
-            cc.Sacar(200);
-            Console.WriteLine(cc.Saldo);
+            ContaCorrente douglas = new ContaCorrente();
+            douglas.Depositar(100);
+            //Saque inválido
+            douglas.Sacar(200);
+            Console.WriteLine($"Saldo do Douglas: R$:{douglas.Saldo}");
 
-            cc.Depositar(100);
-            Console.WriteLine(cc.Saldo);
-
-            ContaCorrente cc1 = new ContaCorrente();
-
-            cc.Transferir(100, cc1);
-            Console.WriteLine(cc1.Saldo);
-            Console.WriteLine(cc.Saldo);
+            ContaCorrente jorge = new ContaCorrente();
+            douglas.Transferir(100, jorge);
+            Console.WriteLine($"Saldo do Jorge: R${jorge.Saldo}");
+            Console.WriteLine($"Saldo do Douglas: R$:{douglas.Saldo}");
         }
     }
 }
